@@ -13,5 +13,5 @@ def optionsbackend(optanswer):
     elif optanswer == 'Delete Directory':
         delete_dir_cli(optanswer)
     elif optanswer == 'Quit':
-        
+        check_all_enc()
         

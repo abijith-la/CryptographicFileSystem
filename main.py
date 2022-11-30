@@ -42,7 +42,7 @@ def Main():
 		elif fileordir(os.getcwd(),answer) == 0:
 			change_dir(answer)
 		else:
-			Main()
+			os.open(answer,'rb')
 			#redirect to download module
 			 
 			

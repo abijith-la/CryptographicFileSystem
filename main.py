@@ -1,20 +1,21 @@
 import os
-import time
+import shutil
 
 from aes1 import *
 from file_manager_cli import *
 from password_cli import *
+from options_cli import *
+from functions import *
 
 from pyfiglet import Figlet
 f = Figlet(font='cybermedium')
 
+
 print (f.renderText('Cryptographic File System'))
-input("Press Enter to access files...")
+key = password_cli()
 os.system('clear')
 
-password_cli()
-
-def Main():
+""" def Main():
 	choice = input("Would you like to (E)encrypt or (D)Decrypt ")
 
 	if choice == 'E':
@@ -27,30 +28,27 @@ def Main():
 		print("Done.")
 
 	else:
-		print("No option selected, closing...")
-
-
-
-def listdir():
-  list = os.listdir()
-  return list
-
-def change_dir(name):
-  os.chdir(name)
-
-def remdir(name):
-  os.rmdir(name)
-def newdir(name):
-  os.mkdir(name)
+		print("No option selected, closing...") """
 
 #def copyfile():  
 
 #def remfile():
+def Main():
+	while (True):
+		list = listdir()
+		answer = file_manager_cli(list)
+		if answer == '//More Options//':
+			options_cli()
+		elif fileordir(os.getcwd(),answer) == 0:
+			change_dir(answer)
+		else:
+			Main()
+			#redirect to download module
+			 
+			
 
-while (True):
-  list = listdir()
-  answers = file_manager_cli(list)
-  answer = answers['ans']
-  change_dir(answer)
-  os.system('clear')
+
+			
+
+Main()
 

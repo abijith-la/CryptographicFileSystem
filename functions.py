@@ -1,5 +1,5 @@
 import os
-
+import shutil
 
 name = 'crypto'
 
@@ -10,8 +10,8 @@ def listdir():
 def change_dir(name):
 	os.chdir(name)
 
-def remdir(name):
-	os.rmdir(name)
+def remdir(path,fdname):
+	shutil.rmtree(path  + '/' + fdname)
 
 def newdir(name):
 	os.mkdir(name)

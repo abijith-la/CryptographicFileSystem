@@ -12,17 +12,10 @@ from password_backend import *
 from pyfiglet import Figlet
 f = Figlet(font='cybermedium')
 
-def password_verify():
-	key = password_cli()
-	if password_backend(key) == False:
-		os.system('clear')
-		print("Wrong Password!")
-		password_verify()
-	else:
-		return
+
 
 os.system('clear')
-password_verify()
+password_verify_start()
 
 
 

@@ -28,6 +28,7 @@ def fileordir(path,fdname):
 def nothomedir(path):
 	return path.rsplit('/')[-1] != name
 
+
 def check_all_enc():
 	pass
 

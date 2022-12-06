@@ -1,7 +1,7 @@
 from functions import *
 
 def down_file_backend(path, filename):
-    print("Do you want to download ", filename, "?")
+    print("Do you want to download", filename, "?")
     ch = input("(y/n): ")
     if ch == 'y':
         download_file(path, filename)

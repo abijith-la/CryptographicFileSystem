@@ -1,16 +1,12 @@
 from __future__ import print_function, unicode_literals
 
-
-def password_cli():
+def password_change_cli():
     from PyInquirer import prompt, print_json
     from examples import custom_style_2
-    from pyfiglet import Figlet
-    f = Figlet(font='cybermedium')
-    print (f.renderText('Cryptographic File System'))
     questions = [
         {
             'type': 'password',
-            'message': 'Enter the password: ',
+            'message': 'Enter the current password: ',
             'name': 'password'
         }
     ]

@@ -7,13 +7,26 @@ from options_cli import *
 from functions import *
 from optionsbackend import *
 from down_file_backend import *
+from password_backend import *
 
 from pyfiglet import Figlet
 f = Figlet(font='cybermedium')
 
+def password_verify():
+	key = password_cli()
+	if password_backend(key) == False:
+		os.system('clear')
+		print("Wrong Password!")
+		password_verify()
+	else:
+		return
 
-key = password_cli()
 os.system('clear')
+password_verify()
+
+
+
+
 
 """ def Main():
 	choice = input("Would you like to (E)encrypt or (D)Decrypt ")
@@ -46,10 +59,10 @@ def Main():
 			Main()
 			#redirect to download module
 			 
-			
+Main()	
 
 
 			
 
-Main()
+
 

@@ -10,11 +10,11 @@ def optionsbackend(optanswer):
         dname = input ('Enter the name of the new directory: ')
         newdir(dname)
     elif optanswer == 'Delete File':
-        down_del_file_cli(listdir())
+        down_del_file_cli(listonlyfiles())
     elif optanswer == 'Download File':
-        down_del_file_cli(listdir())
+        down_del_file_cli(listonlyfiles())
     elif optanswer == 'Delete Directory':
-        delete_dir_cli(optanswer)
+        delete_dir_cli(listonlydir())
     elif optanswer == 'Upload Files':
         pass
     elif optanswer == 'Change Password':

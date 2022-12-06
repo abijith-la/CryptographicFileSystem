@@ -1,11 +1,29 @@
 import os
 import shutil
 
-name = 'crypto'
+name = 'crypto - Copy'
 
 def listdir():
 	list = os.listdir()
 	return list
+
+def listonlydir():
+	list = os.listdir()
+	path = os.getcwd()
+	list1 = []
+	for name in list:
+		if fileordir(path,name) == 0:
+			list1.append(name)
+	return list1
+
+def listonlyfiles():
+	list = os.listdir()
+	path = os.getcwd()
+	list1 = []
+	for name in list:
+		if fileordir(path,name) == 1:
+			list1.append(name)
+	return list1
 
 def change_dir(name):
 	os.chdir(name)

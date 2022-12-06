@@ -11,7 +11,6 @@ from pyfiglet import Figlet
 f = Figlet(font='cybermedium')
 
 
-print (f.renderText('Cryptographic File System'))
 key = password_cli()
 os.system('clear')
 
@@ -43,6 +42,7 @@ def Main():
 			change_dir(answer)
 		else:
 			os.open(answer,'rb')
+			Main()
 			#redirect to download module
 			 
 			

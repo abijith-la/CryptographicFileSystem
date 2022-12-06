@@ -30,3 +30,10 @@ def nothomedir(path):
 
 def check_all_enc():
 	pass
+
+def download_file(path,fname):
+	pass
+
+def del_file(path,fname):
+	pass
+

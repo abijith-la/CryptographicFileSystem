@@ -6,6 +6,7 @@ from password_cli import *
 from options_cli import *
 from functions import *
 from optionsbackend import *
+from down_file_backend import *
 
 from pyfiglet import Figlet
 f = Figlet(font='cybermedium')
@@ -41,7 +42,7 @@ def Main():
 		elif fileordir(os.getcwd(),answer) == 0:
 			change_dir(answer)
 		else:
-			os.open(answer,'rb')
+			down_file_backend(os.getcwd(),answer)
 			Main()
 			#redirect to download module
 			 

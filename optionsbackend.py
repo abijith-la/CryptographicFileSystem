@@ -9,7 +9,7 @@ def optionsbackend(optanswer):
         dname = input ('Enter the name of the new directory: ')
         newdir(dname)
     elif optanswer == 'Delete File':
-        delete_file_cli(optanswer)
+        down_del_file_cli(listdir())
     elif optanswer == 'Delete Directory':
         delete_dir_cli(optanswer)
     elif optanswer == 'Quit':

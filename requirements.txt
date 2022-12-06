@@ -1,3 +1,4 @@
 pycrypto
 pyfiglet
 PyInquirer
+passlib

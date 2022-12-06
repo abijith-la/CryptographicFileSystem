@@ -2,7 +2,7 @@ from __future__ import print_function, unicode_literals
 
 def options_cli():
     from PyInquirer import style_from_dict, Token, prompt, Separator
-    list = ['Return','New Directory','Delete File','Delete Directory','Upload File','Download File','Quit']
+    list = ['Return','New Directory','Delete File','Delete Directory','Upload Files','Download File','Quit']
     style = style_from_dict({
         Token.Separator: '#cc5454',
         Token.QuestionMark: '#673ab7 bold',

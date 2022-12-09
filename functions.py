@@ -1,5 +1,6 @@
 import os
 import shutil
+from aes1 import *
 
 name = 'crypto - Copy'
 
@@ -47,8 +48,11 @@ def nothomedir(path):
 	return path.rsplit('/')[-1] != name
 
 
-def check_all_enc():
-	pass
+def enc_all(main_path):
+	change_dir(main_path + '/' + 'cfs1234' )
+	print(os.getcwd())
+	
+	
 
 def download_file(path,fname):
 	pass

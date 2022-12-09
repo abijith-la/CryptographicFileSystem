@@ -27,7 +27,7 @@ def encrypt(key, filename):
 
 def decrypt(key, filename):
 	chunksize = 64*1024
-	outputFile = filename[11:]
+	outputFile = filename[5:]
 
 	with open(filename, 'rb') as infile:
 		filesize = int(infile.read(16))

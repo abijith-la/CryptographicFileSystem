@@ -25,6 +25,7 @@ def password_verify_start():
 		print("Wrong Password!")
 		password_verify_start()
 	else:
+		os.system('clear')
 		return
 
 def password_change():

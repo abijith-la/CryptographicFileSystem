@@ -20,5 +20,5 @@ def optionsbackend(optanswer):
     elif optanswer == 'Change Password':
         password_change()
     elif optanswer == 'Quit':
-        check_all_enc()
+        enc_all()
         

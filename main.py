@@ -13,8 +13,8 @@ from pyfiglet import Figlet
 f = Figlet(font='cybermedium')
 
 
-
 os.system('clear')
+main_path = os.getcwd()
 password_verify_start()
 
 

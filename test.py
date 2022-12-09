@@ -1,2 +1,3 @@
 from functions import *
-enc_all(os.getcwd())
+enc_all()
+zip_enc()

@@ -1,7 +1,6 @@
 import os
 from Crypto.Cipher import AES
 from Crypto import Random
-key = b'Sixteen byte key'
 def encrypt(key, filename):
 	chunksize = 64*1024
 	outputFile = "(enc)"+filename

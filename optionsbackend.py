@@ -1,4 +1,5 @@
 import os
+import sys
 from delete_dir_cli import *
 from down_del_file_cli import *
 from functions import *
@@ -21,4 +22,7 @@ def optionsbackend(optanswer):
         password_change()
     elif optanswer == 'Quit':
         enc_all()
+        zip_enc()
+        sys.exit()
+
         

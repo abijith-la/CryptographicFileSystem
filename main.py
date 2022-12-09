@@ -17,6 +17,12 @@ os.system('clear')
 main_path = os.getcwd()
 password_verify_start()
 
+zip_dec()
+dec_all()
+
+change_dir(dir_path + "/cfs1234")
+
+
 
 
 

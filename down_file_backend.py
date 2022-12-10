@@ -12,6 +12,8 @@ def down_file_backend(path, filename):
             del_file(path, filename)
             print(filename, " has been deleted.")
         else:
+            os.system('clear')
             return
     else:
+        os.system('clear')
         return

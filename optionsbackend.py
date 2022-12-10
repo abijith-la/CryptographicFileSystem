@@ -17,7 +17,7 @@ def optionsbackend(optanswer):
     elif optanswer == 'Delete Directory':
         delete_dir_cli(listonlydir())
     elif optanswer == 'Upload Files':
-        pass
+        print(os.getcwd())
     elif optanswer == 'Change Password':
         password_change()
     elif optanswer == 'Quit':

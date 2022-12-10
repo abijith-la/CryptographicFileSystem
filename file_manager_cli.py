@@ -5,6 +5,7 @@ import os
 
 def file_manager_cli(list):
     import os
+    os.system('clear')
     from PyInquirer import style_from_dict, Token, prompt, Separator
 
     style = style_from_dict({

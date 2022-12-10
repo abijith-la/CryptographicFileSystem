@@ -22,29 +22,6 @@ dec_all()
 
 change_dir(dir_path + "/cfs1234")
 
-
-
-
-
-
-""" def Main():
-	choice = input("Would you like to (E)encrypt or (D)Decrypt ")
-
-	if choice == 'E':
-		filename = input("File to encrypt: ")
-		encrypt(key, filename)     
-		print('Done.')
-	elif choice == 'D':
-		filename = input("File to decrypt: ")
-		decrypt(key, filename)
-		print("Done.")
-
-	else:
-		print("No option selected, closing...") """
-
-#def copyfile():  
-
-#def remfile():
 def Main():
 	while (True):
 		list = listdir()
@@ -55,8 +32,6 @@ def Main():
 			change_dir(answer)
 		else:
 			down_file_backend(os.getcwd(),answer)
-			Main()
-			#redirect to download module
 			 
 Main()	
 

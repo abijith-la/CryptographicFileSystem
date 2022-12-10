@@ -16,4 +16,5 @@ Run main.py
 
 #### Note
 Make sure all dependencies are installed. <br />
+You can also use `pip install -r requirements.txt` <br />
 Windows users can use WSL to run the application.

@@ -13,18 +13,20 @@ def listonlydir():
 	list = os.listdir()
 	path = os.getcwd()
 	list1 = []
-	for name in list:
-		if fileordir(path,name) == 0:
-			list1.append(name)
+	if len(list) > 0:
+		for name in list:
+			if fileordir(path,name) == 0:
+				list1.append(name)
 	return list1
 
 def listonlyfiles():
 	list = os.listdir()
 	path = os.getcwd()
 	list1 = []
-	for name in list:
-		if fileordir(path,name) == 1:
-			list1.append(name)
+	if len(list) > 0:
+		for name in list:
+			if fileordir(path,name) == 1:
+				list1.append(name)
 	return list1
 
 def change_dir(name):
@@ -76,7 +78,7 @@ def sup_dec(key, dir):
 		if fileordir(os.getcwd(),i) == 1:
 			decrypt(key,i)
 			del_file(os.getcwd(),i)
-		else:
+		elif fileordir(os.getcwd(),i) == 0:
 			sup_dec(key, i)
 
 def zip_enc():
@@ -97,9 +99,17 @@ def zip_dec():
 	del_file(dir_path,"cfs1234.zip")
 
 def download_file(path,fname):
-	pass
+	shutil.copy2(path + '/' +fname, dir_path + '/cfsdownloads')
 
 def del_file(path,fname):
 	path = path + '/' + fname
 	os.remove(path)
 
+def del_contents_ofdir(path):
+	filedir = os.listdir(path)
+	for i in filedir:
+		fullpath =  path + '/' + i
+		if os.path.isfile(fullpath):
+			os.remove(fullpath)
+		elif os.path.isdir(fullpath):
+			shutil.rmtree(fullpath)

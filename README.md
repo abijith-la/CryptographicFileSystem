@@ -4,8 +4,8 @@ Language used : Python
 
 #### Dependencies
 ```
-pip install pycrypto
-pip install pyfiglet
-pip install PyInquirer
-pip install passlib
+pycryptodome
+pyfiglet
+PyInquirer
+passlib
 ```

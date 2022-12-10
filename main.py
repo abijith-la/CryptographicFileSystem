@@ -16,10 +16,17 @@ f = Figlet(font='cybermedium')
 os.system('clear')
 main_path = os.getcwd()
 password_verify_start()
-
-zip_dec()
-dec_all()
-
+if os.path.exists(dir_path + "/cfs1234"):
+	pass
+elif os.path.exists(dir_path + "/(enc)cfs1234.zip"):
+	zip_dec()
+	if os.path.exists(dir_path + "/cfs1234"):
+		if len(os.listdir(dir_path + "/cfs1234")) > 0:
+			dec_all()
+	else:
+		newdir('cfs1234')
+else:
+	newdir('cfs1234')
 change_dir(dir_path + "/cfs1234")
 
 def Main():

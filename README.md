@@ -15,5 +15,5 @@ Clone this repo into your desired folder<br />
 Run main.py
 
 #### Note
-Make sure all dependancies are installed. <br />
+Make sure all dependencies are installed. <br />
 Windows users can use WSL to run the application.
